@@ -2,6 +2,7 @@ package com.example.dice_roller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 
@@ -34,9 +35,25 @@ class MainActivity : AppCompatActivity() {
         // Create new Dice object with 6 sides and roll it
         val dice = Dice(6)
         val diceRoll = dice.roll()
-
-        // Update the screen with the dice roll
+        val diceImage: ImageView = findViewById(R.id.imageView)
+        diceImage.setImageResource(R.drawable.dice_2)
+        //Function to show the number on the text view
         val resultTextView: TextView = findViewById(R.id.textView)
         resultTextView.text = diceRoll.toString()
+
+        //If else to set the dice image to show the number
+        if (diceRoll == 1) {
+            diceImage.setImageResource(R.drawable.dice_1)
+        } else if (diceRoll == 2) {
+            diceImage.setImageResource(R.drawable.dice_2)
+        } else if (diceRoll == 3) {
+            diceImage.setImageResource(R.drawable.dice_3)
+        } else if (diceRoll == 4) {
+            diceImage.setImageResource(R.drawable.dice_4)
+        } else if (diceRoll == 5) {
+            diceImage.setImageResource(R.drawable.dice_5)
+        } else if (diceRoll == 6) {
+            diceImage.setImageResource(R.drawable.dice_6)
+        }
     }
 }

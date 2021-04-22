@@ -1,5 +1,5 @@
 # Android-dev
-My Android Development starts now.
+My Android Development starts now
 All my Android apps will be pushed here
 
 ## Android Projects
